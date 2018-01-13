@@ -448,7 +448,7 @@ fi
 rm -rf "$BUILD_APP_PATH" || true
 mkdir -p "$BUILD_APP_PATH" || true
 cp -rf "$TARGET_APP_PATH/" "$BUILD_APP_PATH/"
-if [[ -f "$BUILD_APP_PATH/embedded.mobileprovision"]]; then
+if [[ -f "$BUILD_APP_PATH/embedded.mobileprovision" ]]; then
 	rm "$BUILD_APP_PATH/embedded.mobileprovision"
 fi
 if [[ "$PRODUCT_BUNDLE_IDENTIFIER" != "" ]]; then
