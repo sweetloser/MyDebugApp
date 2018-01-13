@@ -28,6 +28,7 @@ cp -rf ../ "$MyDebugAppPath"
 
 #为模板建立链接
 echo "为模板建立链接"
+rm -rf "$XcodeTemplatePath/MyDebugApp"
 ln -fs "$MyDebugAppPath/XcodeTemplate" "$XcodeTemplatePath/MyDebugApp"
 
 
