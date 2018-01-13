@@ -448,8 +448,10 @@ fi
 rm -rf "$BUILD_APP_PATH" || true
 mkdir -p "$BUILD_APP_PATH" || true
 cp -rf "$TARGET_APP_PATH/" "$BUILD_APP_PATH/"
-rm "$BUILD_APP_PATH/embedded.mobileprovision" || true
-if [[ "$PRODUCT_BUNDLE_IDENTIFIER" != "aaa" ]]; then
+if [[ -f "$BUILD_APP_PATH/embedded.mobileprovision"]]; then
+	rm "$BUILD_APP_PATH/embedded.mobileprovision"
+fi
+if [[ "$PRODUCT_BUNDLE_IDENTIFIER" != "" ]]; then
     /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $PRODUCT_BUNDLE_IDENTIFIER" "$BUILD_APP_PATH/Info.plist"
 fi
 
