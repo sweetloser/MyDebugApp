@@ -36,6 +36,11 @@
 		<dict>
 			<key>ProductType</key>
 			<string>com.apple.product-type.application</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>ENABLE_USER_SCRIPT_SANDBOXING</key>
+				<false/>
+			</dict>
 			<key>BuildPhases</key>
 			<array>
 				<dict>
