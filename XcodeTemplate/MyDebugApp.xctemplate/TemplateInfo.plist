@@ -39,7 +39,7 @@
 			<key>SharedSettings</key>
 			<dict>
 				<key>ENABLE_USER_SCRIPT_SANDBOXING</key>
-				<false/>
+				<string>NO</string>
 			</dict>
 			<key>BuildPhases</key>
 			<array>
